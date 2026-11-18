@@ -169,7 +169,7 @@
   /* ---------- quietly preload the main pages so navigation feels instant ---------- */
   var idle = window.requestIdleCallback || function (cb) { return setTimeout(cb, 1500); };
   idle(function () {
-    ["index.html", "about.html", "services.html", "events.html", "careers.html", "reach-us.html", "blog.html"].forEach(function (h, n) {
+    ["/", "about", "services", "events", "careers", "reach-us", "blog"].forEach(function (h, n) {
       setTimeout(function () {
         var l = document.createElement("link");
         l.rel = "prefetch"; l.href = h; l.as = "document";
